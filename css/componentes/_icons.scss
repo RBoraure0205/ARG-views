@@ -1,0 +1,28 @@
+@import "./icons/scss/fontawesome.scss";
+@import "./icons/scss/solid.scss";
+
+.paper-plane {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-paper-plane);
+  }
+}
+
+.globe {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-globe);
+  }
+}
+.book {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-book);
+  }
+}

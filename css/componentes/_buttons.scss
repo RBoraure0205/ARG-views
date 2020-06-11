@@ -1,0 +1,7 @@
+.button {
+  @include buttonVar(130px, 48px);
+  &__text {
+    @include titulo($fuente-1);
+    @include font-sizeBody(18px);
+  }
+}

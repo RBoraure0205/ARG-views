@@ -1,0 +1,12 @@
+mixin button(titulo)
+    a(href="")
+        .button
+            span.button__text= titulo
+mixin feature(icoUrl,title, desc, button)
+    .features__container__item
+        i.fas(class=icoUrl).features__container__item__icon
+        h3.features__container__item__title= title
+        p.features__container__item__desc= desc
+        +button(button)
+
+        

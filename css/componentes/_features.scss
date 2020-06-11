@@ -1,0 +1,49 @@
+.features {
+  position: relative;
+  height: 100vh;
+  padding: 50px 30px;
+
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 80%;
+    z-index: -1;
+    object-fit: fill;
+  }
+  &__title {
+    @include titulo($fuente-1);
+    @include font-sizeTitle(50px);
+  }
+  &__container {
+    width: 90%;
+    border-radius: 100px;
+    height: fit-content;
+    margin: 8% auto;
+    display: flex;
+    justify-content: space-around;
+    padding: 5%;
+    color: $color-oscuro;
+    background-color: $color-claro;
+    &__item {
+      width: 25%;
+      text-align: center;
+      &__icon {
+        @include font-sizeTitle(50px);
+        font-weight: 900;
+        margin: 15px 0;
+      }
+      &__title {
+        @include titulo($fuente-1);
+        @include font-sizeTitle(25px);
+      }
+      &__desc {
+        @include font-sizeBody(20px);
+      }
+      .button {
+        margin: 15px auto;
+      }
+    }
+  }
+}

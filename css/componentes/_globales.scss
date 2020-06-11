@@ -1,0 +1,65 @@
+//variables
+//Iconos
+@import "./icons/scss/fontawesome.scss";
+@import "./icons/scss/solid.scss";
+@import "./icons/scss/brands.scss";
+//colores
+$color-primario: #2f89fc;
+$color-variacion: #30e3ca;
+$color-claro: #ffffff;
+$color-oscuro: #333333;
+//fuentes
+$fuente-1: "Oswald", sans-serif;
+$fuente-2: "Lato", sans-serif;
+//mixins
+@mixin titulo($fuente) {
+  @if $fuente== $fuente-2 {
+    font-family: $fuente;
+  } @else {
+    font-family: $fuente;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+@mixin font-sizeBody($size) {
+  font-size: calculateRem($size);
+  line-height: calculateRem($size) * 1.5;
+}
+@mixin font-sizeTitle($size) {
+  font-size: calculateRem($size);
+  line-height: calculateRem($size) * 1;
+}
+@mixin linkHover {
+  text-decoration: underline;
+  color: $color-variacion;
+  cursor: pointer;
+}
+@mixin buttonVar($w, $h) {
+  display: flex;
+  width: $w;
+  height: $h;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 6px 6px 6px rgba(48, 227, 202, 0.3);
+  border-radius: $h/4;
+  background: linear-gradient(
+    95.72deg,
+    $color-primario 0%,
+    $color-variacion 99.31%
+  );
+}
+//funciones
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+//Estilos globales
+* {
+  box-sizing: border-box;
+}
+body {
+  color: $color-claro;
+  font-family: $fuente-2;
+  position: relative;
+}

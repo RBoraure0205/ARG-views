@@ -1,0 +1,57 @@
+.hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  &__back {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(
+        0deg,
+        rgba(47, 136, 252, 0.5),
+        rgba(47, 137, 252, 0.5)
+      ),
+      url("../assets/img/hero.jpg") fixed no-repeat center/100%;
+    background-size: cover;
+    filter: blur(2px);
+    object-fit: cover;
+  }
+  &__contactUs {
+    position: fixed;
+    top: auto;
+    bottom: auto;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: $color-primario;
+  }
+  &__content {
+    width: 50%;
+    &__title {
+      margin-bottom: 20px;
+      line-height: 40px;
+      @include titulo($fuente-1);
+      @include font-sizeTitle(65px);
+    }
+    &__description {
+      width: 85%;
+      margin: 35px 0;
+      p {
+        @include font-sizeBody(20px);
+      }
+    }
+    .button {
+      @include buttonVar(170px, 50px);
+      &__text {
+        @include titulo($fuente-1);
+        @include font-sizeBody(18px);
+      }
+    }
+  }
+}

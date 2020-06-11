@@ -1,0 +1,9 @@
+-var navItems = ["Nosotros", "Contactanos", "Productos", "Blog"]
+nav.nav
+    .nav__logo
+        img(src="../assets/img/logo.png", alt="")
+    .nav__container
+        ul
+            each ni in navItems
+                li= ni
+        +button("Ingresa")
